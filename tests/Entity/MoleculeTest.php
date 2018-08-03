@@ -22,7 +22,7 @@ use PHPUnit\Framework\TestCase;
  * $molecule->getAtoms(); // retourne un tableau d'atomes
  * $molecule->merge(); // Réaliser la fusion si au moins 2 atomes
  * $molecule->getName(); // Renvoie CO
- * $molecule->getType(); // Renvoie glucide
+ * $molecule->getType(); // Renvoie glucide.
  */
 class MoleculeTest extends TestCase
 {
@@ -61,10 +61,10 @@ class MoleculeTest extends TestCase
     public function testMoleculeCanBeMerged()
     {
         $carbon = $this->createConfiguredMock(Atom::class, [
-            'getSymbol' => 'C'
+            'getSymbol' => 'C',
         ]);
         $oxygen = $this->createConfiguredMock(Atom::class, [
-            'getSymbol' => 'O'
+            'getSymbol' => 'O',
         ]);
         $molecule = new Molecule('glucide');
         $molecule->addAtom($carbon)
